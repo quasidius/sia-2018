@@ -1,0 +1,225 @@
+{#
+/**
+ * @file
+ * Bootstrap Barrio's theme implementation to display a single page.
+ *
+ * The doctype, html, head and body tags are not in this template. Instead they
+ * can be found in the html.html.twig template normally located in the
+ * core/modules/system directory.
+ *
+ * Available variables:
+ *
+ * General utility variables:
+ * - base_path: The base URL path of the Drupal installation. Will usually be
+ *   "/" unless you have installed Drupal in a sub-directory.
+ * - is_front: A flag indicating if the current page is the front page.
+ * - logged_in: A flag indicating if the user is registered and signed in.
+ * - is_admin: A flag indicating if the user has permission to access
+ *   administration pages.
+ *
+ * Site identity:
+ * - front_page: The URL of the front page. Use this instead of base_path when
+ *   linking to the front page. This includes the language domain or prefix.
+ * - logo: The url of the logo image, as defined in theme settings.
+ * - site_name: The name of the site. This is empty when displaying the site
+ *   name has been disabled in the theme settings.
+ * - site_slogan: The slogan of the site. This is empty when displaying the site
+ *   slogan has been disabled in theme settings.
+
+ * Page content (in order of occurrence in the default page.html.twig):
+ * - node: Fully loaded node, if there is an automatically-loaded node
+ *   associated with the page and the node ID is the second argument in the
+ *   page's path (e.g. node/12345 and node/12345/revisions, but not
+ *   comment/reply/12345).
+ *
+ * Regions:
+ * - page.top_header: Items for the top header region.
+ * - page.top_header_form: Items for the top header form region.
+ * - page.header: Items for the header region.
+ * - page.header_form: Items for the header form region.
+ * - page.highlighted: Items for the highlighted region.
+ * - page.primary_menu: Items for the primary menu region.
+ * - page.secondary_menu: Items for the secondary menu region.
+ * - page.featured_top: Items for the featured top region.
+ * - page.content: The main content of the current page.
+ * - page.sidebar_first: Items for the first sidebar.
+ * - page.sidebar_second: Items for the second sidebar.
+ * - page.featured_bottom_first: Items for the first featured bottom region.
+ * - page.featured_bottom_second: Items for the second featured bottom region.
+ * - page.featured_bottom_third: Items for the third featured bottom region.
+ * - page.footer_first: Items for the first footer column.
+ * - page.footer_second: Items for the second footer column.
+ * - page.footer_third: Items for the third footer column.
+ * - page.footer_fourth: Items for the fourth footer column.
+ * - page.footer_fifth: Items for the fifth footer column.
+ * - page.breadcrumb: Items for the breadcrumb region.
+ *
+ * Theme variables:
+ * - navbar_top_attributes: Items for the header region.
+ * - navbar_attributes: Items for the header region.
+ * - content_attributes: Items for the header region.
+ * - sidebar_first_attributes: Items for the highlighted region.
+ * - sidebar_second_attributes: Items for the primary menu region.
+ * - sidebar_collapse: If the sidebar_first will collapse.
+ *
+ * @see template_preprocess_page()
+ * @see bootstrap_barrio_preprocess_page()
+ * @see html.html.twig
+ */
+#}
+  <div class="container" id="top">
+    <aside class="sidebar">
+      <nav id="main-menu" class="primary main-menu" role="navigation" aria-expanded="false" aria-label="Main menu">
+          <a href="#main-menu-toggle" class="menu-close" role="button" id="main-menu-close" aria-expanded="false" aria-controls="main-menu" aria-label="Close main menu">
+              <span class="sr-only">Close main menu</span>
+              <span class="" aria-hidden="true"> <i class="fas fa-times"></i></span>
+          </a>
+          {{ page.primary_menu }}
+      </nav>
+      <a href="#main-menu" class="menu-toggle" role="button" id="main-menu-toggle" aria-expanded="false" aria-controls="main-menu" aria-label="Open main menu">
+          <span class="sr-only">Open main menu</span>
+          <span class="" aria-hidden="true"> <i class="fas fa-bars"></i></span>
+      </a>
+      <div class="logo">
+           
+        <svg version="1.1" id="logo-sia" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 396 325.8" style="enable-background:new 0 0 396 325.8;" xml:space="preserve">
+            <style type="text/css">
+                .st0{fill:#B1B1B1;}
+            </style>
+            <rect id="square1-1" x="180" class="square lighterGreen" width="36" height="36"/>
+    
+            <rect id="square2-1" x="144" y="36" class="square lighterGreen" width="36" height="36"/>
+            <rect id="square2-2" x="216" y="36" class="square lighterGreen" width="36" height="36"/>
+    
+            <path id="square3-1" class="square lighterGreen" d="M36,108H0v0c0-19.9,16.1-36,36-36h0V108z"/>
+            <rect id="square3-2" x="36" y="72" class="square lighterGreen" width="36" height="36"/>
+            <rect id="square3-3" x="72" y="72" class="square lighterGreen" width="36" height="36"/>
+            <rect id="square3-4" x="108" y="72" class="square lighterGreen" width="36" height="36"/>
+            <rect id="square3-5" x="180" y="72" class="square lighterGreen" width="36" height="36"/>
+            <rect id="square3-6" x="252" y="72" transform="matrix(-1 -4.471680e-11 4.471680e-11 -1 540 180)" class="square lighterGreen" width="36" height="36"/>
+            <rect id="square3-7" x="288" y="72" transform="matrix(-1 -4.502011e-11 4.502011e-11 -1 612 180)" class="square lighterGreen" width="36" height="36"/>
+            <rect id="square3-8" x="324" y="72" transform="matrix(-1 -4.471680e-11 4.471680e-11 -1 684 180)" class="square lighterGreen" width="36" height="36"/>
+            <path id="square3-9" class="square lighterGreen" d="M360,108h36v0c0-19.9-16.1-36-36-36h0V108z"/>
+    
+            <path id="square4-1" class="square lightGreen" d="M36,180L36,180c-19.9,0-36-16.1-36-36v0h36V180z"/>
+            <rect id="square4-2" x="36" y="144" class="square lightGreen" width="36" height="36"/>
+            <rect id="square4-3" x="72" y="144" class="square lightGreen" width="36" height="36"/>
+            <path id="square4-4" class="square lightGreen" d="M144,180h-36v-36h0C127.9,144,144,160.1,144,180L144,180z"/>
+            <rect id="square4-5" x="180" y="144" class="square lightGreen" width="36" height="36"/>
+            <rect id="square4-5" x="180" y="144" class="square lightGreen" width="36" height="36"/>
+            <path id="square4-6" class="square lightGreen" d="M252,180h36v-36h0C268.1,144,252,160.1,252,180L252,180z"/>
+            <rect id="square4-7" x="288" y="144" transform="matrix(-1 -4.502011e-11 4.502011e-11 -1 612 324)" class="square lightGreen" width="36" height="36"/>
+            <rect id="square4-8" x="324" y="144" transform="matrix(-1 -4.471680e-11 4.471680e-11 -1 684 324)" class="square lightGreen" width="36" height="36"/>
+            <rect id="square4-9" x="360" y="144" transform="matrix(-1 -4.502011e-11 4.502011e-11 -1 756 324)" class="square lightGreen" width="36" height="36"/>
+    
+            <rect id="square5-1" x="108" y="180" class="square green" width="36" height="36"/>
+            <rect id="square5-2" x="180" y="180" class="square green" width="36" height="36"/>
+            <rect id="square5-3" x="252" y="180" transform="matrix(-1 -4.471680e-11 4.471680e-11 -1 540 396)" class="square green" width="36" height="36"/>
+            <rect id="square5-4" x="360" y="180" transform="matrix(-1 -4.496948e-11 4.496948e-11 -1 756 396)" class="square green" width="36" height="36"/>
+    
+            <rect id="square6-1" y="216" class="square darkGreen" width="36" height="36"/>
+            <rect id="square6-2" x="36" y="216" class="square darkGreen" width="36" height="36"/>
+            <rect id="square6-3" x="72" y="216" class="square darkGreen" width="36" height="36"/>
+            <path id="square6-4" class="square darkGreen" d="M108,252L108,252l0-36h36v0C144,235.9,127.9,252,108,252z"/>
+            <rect id="square6-5" x="180" y="216" class="square darkGreen" width="36" height="36"/>
+            <path id="square6-6" class="square darkGreen" d="M288,252L288,252l0-36h-36v0C252,235.9,268.1,252,288,252z"/>
+            <rect id="square6-7" x="288" y="216" transform="matrix(-1 -4.502011e-11 4.502011e-11 -1 612 468)" class="square darkGreen" width="36" height="36"/>
+            <rect id="square6-8" x="324" y="216" transform="matrix(-1 -4.471680e-11 4.471680e-11 -1 684 468)" class="square darkGreen" width="36" height="36"/>
+            <rect id="square6-9" x="360" y="216" transform="matrix(-1 -4.496948e-11 4.496948e-11 -1 756 468)" class="square darkGreen" width="36" height="36"/>
+            <g>
+                <g>
+                    <path class="st0" d="M20.3,296.5c-0.1,0.2-0.3,0.4-0.5,0.5c-0.2,0.1-0.4,0.2-0.6,0.2c-0.3,0-0.6-0.1-0.9-0.4
+                        c-0.4-0.3-0.8-0.6-1.4-0.9s-1.2-0.6-2-0.9c-0.8-0.3-1.7-0.4-2.8-0.4c-1,0-1.9,0.1-2.7,0.4c-0.8,0.3-1.5,0.7-2,1.1
+                        c-0.5,0.5-0.9,1-1.2,1.7c-0.3,0.6-0.4,1.3-0.4,2.1c0,1,0.2,1.7,0.7,2.4c0.5,0.6,1.1,1.2,1.9,1.6c0.8,0.4,1.6,0.8,2.6,1.2
+                        c1,0.3,2,0.7,3,1s2,0.7,3,1.2s1.9,1,2.6,1.7c0.8,0.7,1.4,1.5,1.9,2.5c0.5,1,0.7,2.2,0.7,3.6c0,1.5-0.3,2.9-0.8,4.2
+                        c-0.5,1.3-1.3,2.5-2.2,3.4s-2.2,1.7-3.6,2.3c-1.4,0.6-3,0.8-4.9,0.8c-2.2,0-4.2-0.4-6.1-1.2c-1.8-0.8-3.4-1.9-4.7-3.3l1.3-2.2
+                        c0.1-0.2,0.3-0.3,0.5-0.4c0.2-0.1,0.4-0.2,0.6-0.2c0.3,0,0.7,0.2,1.1,0.5c0.4,0.4,1,0.8,1.6,1.2c0.6,0.4,1.4,0.8,2.3,1.2
+                        c0.9,0.4,2,0.5,3.4,0.5c1.1,0,2.1-0.2,2.9-0.5c0.9-0.3,1.6-0.7,2.2-1.3c0.6-0.5,1.1-1.2,1.4-2c0.3-0.8,0.5-1.6,0.5-2.6
+                        c0-1-0.2-1.9-0.7-2.5c-0.5-0.7-1.1-1.2-1.9-1.7c-0.8-0.4-1.6-0.8-2.6-1.1c-1-0.3-2-0.6-3-1c-1-0.3-2-0.7-3-1.1
+                        c-1-0.4-1.9-1-2.6-1.7c-0.8-0.7-1.4-1.5-1.9-2.6c-0.5-1-0.7-2.3-0.7-3.8c0-1.2,0.2-2.4,0.7-3.5c0.5-1.1,1.2-2.1,2-3
+                        c0.9-0.9,2-1.6,3.3-2.1c1.3-0.5,2.8-0.8,4.5-0.8c1.9,0,3.7,0.3,5.2,0.9c1.6,0.6,3,1.5,4.1,2.6L20.3,296.5z"/>
+                    <path class="st0" d="M76.6,308.3c0,2.6-0.4,4.9-1.2,7.1c-0.8,2.1-2,4-3.4,5.5c-1.5,1.5-3.3,2.7-5.3,3.6c-2.1,0.9-4.4,1.3-6.9,1.3
+                        c-2.5,0-4.8-0.4-6.9-1.3c-2.1-0.9-3.8-2.1-5.3-3.6c-1.5-1.5-2.6-3.4-3.4-5.5c-0.8-2.1-1.2-4.5-1.2-7.1c0-2.6,0.4-4.9,1.2-7.1
+                        c0.8-2.1,2-4,3.4-5.5c1.5-1.6,3.3-2.8,5.3-3.6c2.1-0.9,4.4-1.3,6.9-1.3c2.5,0,4.8,0.4,6.9,1.3c2.1,0.9,3.9,2.1,5.3,3.6
+                        c1.5,1.6,2.6,3.4,3.4,5.5C76.2,303.4,76.6,305.8,76.6,308.3z M71.9,308.3c0-2.1-0.3-4-0.9-5.7c-0.6-1.7-1.4-3.1-2.4-4.2
+                        c-1.1-1.2-2.3-2-3.8-2.7c-1.5-0.6-3.2-0.9-5-0.9c-1.8,0-3.5,0.3-5,0.9c-1.5,0.6-2.8,1.5-3.8,2.7c-1.1,1.2-1.9,2.6-2.4,4.2
+                        c-0.6,1.7-0.9,3.6-0.9,5.7c0,2.1,0.3,4,0.9,5.7c0.6,1.7,1.4,3.1,2.4,4.2c1.1,1.2,2.3,2,3.8,2.7c1.5,0.6,3.2,0.9,5,0.9
+                        c1.8,0,3.5-0.3,5-0.9c1.5-0.6,2.8-1.5,3.8-2.7c1.1-1.2,1.9-2.6,2.4-4.2C71.6,312.3,71.9,310.4,71.9,308.3z"/>
+                    <path class="st0" d="M104.3,321.5h14.8v3.9H99.7v-34.2h4.6V321.5z"/>
+                    <path class="st0" d="M154.3,321.7c1.4,0,2.7-0.2,3.8-0.7c1.1-0.5,2.1-1.1,2.8-2c0.8-0.9,1.4-1.9,1.8-3.1c0.4-1.2,0.6-2.5,0.6-3.9
+                        v-20.8h4.6V312c0,2-0.3,3.8-0.9,5.5c-0.6,1.7-1.5,3.2-2.7,4.4c-1.2,1.2-2.6,2.2-4.3,2.9c-1.7,0.7-3.6,1.1-5.7,1.1
+                        c-2.1,0-4-0.4-5.7-1.1c-1.7-0.7-3.1-1.7-4.3-2.9c-1.2-1.2-2.1-2.7-2.7-4.4c-0.6-1.7-0.9-3.5-0.9-5.5v-20.8h4.6V312
+                        c0,1.4,0.2,2.7,0.6,3.9c0.4,1.2,1,2.2,1.8,3.1c0.8,0.9,1.7,1.5,2.8,2C151.6,321.5,152.8,321.7,154.3,321.7z"/>
+                    <path class="st0" d="M215.9,291.2v3.9h-11.1v30.3h-4.6v-30.3h-11.1v-3.9H215.9z"/>
+                    <path class="st0" d="M243,325.4h-4.6v-34.2h4.6V325.4z"/>
+                    <path class="st0" d="M300.7,308.3c0,2.6-0.4,4.9-1.2,7.1c-0.8,2.1-2,4-3.4,5.5c-1.5,1.5-3.3,2.7-5.3,3.6c-2.1,0.9-4.4,1.3-6.9,1.3
+                        c-2.5,0-4.8-0.4-6.9-1.3c-2.1-0.9-3.8-2.1-5.3-3.6c-1.5-1.5-2.6-3.4-3.4-5.5c-0.8-2.1-1.2-4.5-1.2-7.1c0-2.6,0.4-4.9,1.2-7.1
+                        c0.8-2.1,2-4,3.4-5.5c1.5-1.6,3.3-2.8,5.3-3.6c2.1-0.9,4.4-1.3,6.9-1.3c2.5,0,4.8,0.4,6.9,1.3c2.1,0.9,3.9,2.1,5.3,3.6
+                        c1.5,1.6,2.6,3.4,3.4,5.5C300.3,303.4,300.7,305.8,300.7,308.3z M295.9,308.3c0-2.1-0.3-4-0.9-5.7c-0.6-1.7-1.4-3.1-2.4-4.2
+                        c-1.1-1.2-2.3-2-3.8-2.7c-1.5-0.6-3.2-0.9-5-0.9c-1.8,0-3.5,0.3-5,0.9c-1.5,0.6-2.8,1.5-3.8,2.7s-1.9,2.6-2.4,4.2
+                        c-0.6,1.7-0.9,3.6-0.9,5.7c0,2.1,0.3,4,0.9,5.7c0.6,1.7,1.4,3.1,2.4,4.2s2.3,2,3.8,2.7c1.5,0.6,3.2,0.9,5,0.9c1.8,0,3.5-0.3,5-0.9
+                        c1.5-0.6,2.8-1.5,3.8-2.7c1.1-1.2,1.9-2.6,2.4-4.2C295.6,312.3,295.9,310.4,295.9,308.3z"/>
+                    <path class="st0" d="M327,291.3c0.2,0.1,0.4,0.3,0.7,0.6l19.8,25.8c-0.1-0.4-0.1-0.8-0.1-1.2c0-0.4,0-0.8,0-1.1v-24.3h4.1v34.2
+                        h-2.3c-0.4,0-0.7-0.1-0.9-0.2c-0.2-0.1-0.5-0.3-0.7-0.6l-19.8-25.8c0,0.4,0.1,0.8,0.1,1.2c0,0.4,0,0.7,0,1.1v24.4h-4.1v-34.2h2.4
+                        C326.5,291.2,326.8,291.2,327,291.3z"/>
+                    <path class="st0" d="M394.1,296.5c-0.1,0.2-0.3,0.4-0.5,0.5c-0.2,0.1-0.4,0.2-0.6,0.2c-0.3,0-0.6-0.1-0.9-0.4
+                        c-0.4-0.3-0.8-0.6-1.4-0.9s-1.2-0.6-2-0.9c-0.8-0.3-1.7-0.4-2.8-0.4c-1,0-1.9,0.1-2.7,0.4c-0.8,0.3-1.5,0.7-2,1.1
+                        c-0.5,0.5-0.9,1-1.2,1.7c-0.3,0.6-0.4,1.3-0.4,2.1c0,1,0.2,1.7,0.7,2.4c0.5,0.6,1.1,1.2,1.9,1.6c0.8,0.4,1.6,0.8,2.6,1.2
+                        c1,0.3,2,0.7,3,1c1,0.3,2,0.7,3,1.2s1.9,1,2.6,1.7c0.8,0.7,1.4,1.5,1.9,2.5c0.5,1,0.7,2.2,0.7,3.6c0,1.5-0.3,2.9-0.8,4.2
+                        c-0.5,1.3-1.3,2.5-2.2,3.4s-2.2,1.7-3.6,2.3s-3,0.8-4.9,0.8c-2.2,0-4.2-0.4-6.1-1.2c-1.8-0.8-3.4-1.9-4.7-3.3l1.3-2.2
+                        c0.1-0.2,0.3-0.3,0.5-0.4c0.2-0.1,0.4-0.2,0.6-0.2c0.3,0,0.7,0.2,1.1,0.5c0.4,0.4,1,0.8,1.6,1.2c0.6,0.4,1.4,0.8,2.3,1.2
+                        c0.9,0.4,2,0.5,3.4,0.5c1.1,0,2.1-0.2,2.9-0.5s1.6-0.7,2.2-1.3c0.6-0.5,1.1-1.2,1.4-2c0.3-0.8,0.5-1.6,0.5-2.6
+                        c0-1-0.2-1.9-0.7-2.5c-0.5-0.7-1.1-1.2-1.9-1.7c-0.8-0.4-1.6-0.8-2.6-1.1c-1-0.3-2-0.6-3-1c-1-0.3-2-0.7-3-1.1
+                        c-1-0.4-1.9-1-2.6-1.7c-0.8-0.7-1.4-1.5-1.9-2.6c-0.5-1-0.7-2.3-0.7-3.8c0-1.2,0.2-2.4,0.7-3.5c0.5-1.1,1.2-2.1,2-3
+                        c0.9-0.9,2-1.6,3.3-2.1c1.3-0.5,2.8-0.8,4.5-0.8c1.9,0,3.7,0.3,5.2,0.9c1.6,0.6,3,1.5,4.1,2.6L394.1,296.5z"/>
+                </g>
+            </g>
+        </svg>
+      
+    </div>
+  </aside>
+  <section class="gradient">
+    <div id="particles-js"></div>
+    <div class="content">
+      {{ page.header }}
+    </div>
+  </section>
+</div>
+
+<div class="container" id="entreprise">
+  <section>
+    <div class="content">
+      {{ page.section1 }}
+    </div>
+  </section>
+</div>
+
+<div class="container" id="services">
+  <section class="dark">
+    <div class="content">
+      {{ page.section2 }}
+    </div>
+  </section>
+</div>
+
+<div class="container" id="realisations">
+  <section>
+    <div class="content">
+      {{ page.section3 }}
+    </div>
+  </section>
+</div>
+
+<div class="container" id="contact">
+  <section class="gradient">
+    <div class="content">
+      {{ page.section4 }}
+    </div>
+  </section>
+</div>
+
+
+
+
+
+    
