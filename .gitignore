@@ -18,3 +18,6 @@
 
 # Ignore .env files as they are personal
 /.env
+
+/web/themes/contrib/bootstrap_sia/node_modules
+/web/themes/contrib/bootstrap_sass/node_modules
